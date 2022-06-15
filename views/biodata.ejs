@@ -1,0 +1,23 @@
+<h1>Daftar User</h1>
+<button><a href="/game/biodata">Tambah User</a></button>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    <% data.forEach (e => { %>
+        <tr>
+            <td><%= e.name %></td>
+            <td><%= e.gender %></td>
+            <td><%= e.username %></td>
+            <td><%= e.password %></td> 
+            <td>
+                <button><a href="/game/biodata/edit/<%= e.id %>">Edit</a></button>
+                <button><a href="/game/biodata/delete/<%= e.id %>">Delete</a></button>
+            </td>
+        </tr>
+
+    <%})%>
+</table>

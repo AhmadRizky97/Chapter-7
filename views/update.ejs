@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Edit Data</title>
+    </head>
+    <body>
+        <h1>Edit Data</h1>
+        <form method="POST" action="/game/edit/<%= data.id %>">
+            <label>Title</label>
+            <br>
+            <input type="text" name="title" value="<%= data.title %>" />
+            <br>
+            <label>Genre</label>
+            <br>
+            <input type="text" name="genre" value="<%= data.genre %>" />
+            <br>
+            <label>Rating</label>
+            <br>
+            <input type="number" name="rating" value="<%= data.rating %>" />
+            <br>
+            <label>Year</label>
+            <br>
+            <input type="number" name="year" value="<%= data.year %>" />
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

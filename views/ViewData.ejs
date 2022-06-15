@@ -1,0 +1,23 @@
+<h1> Daftar Game</h1>
+<button><a href="/game/create">Tambah Game</a></button>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Rating</th>
+        <th>Year</th>
+    </tr>
+    <% data.forEach (e => { %>
+        <tr>
+            <td><%= e.title %></td>
+            <td><%= e.genre %></td>
+            <td><%= e.rating %></td>
+            <td><%= e.year %></td> 
+            <td>
+                <button><a href="/game/edit/<%= e.id %>">Edit</a></button>
+                <button><a href="/game/delete/<%= e.id %>">Delete</a></button>
+            </td>
+        </tr>
+
+    <%})%>
+</table>

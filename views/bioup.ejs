@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Edit Data</title>
+    </head>
+    <body>
+        <h1>Edit Data</h1>
+        <form method="POST" action="/game/biodata/edit/<%= data.id %>">
+            <label>Name</label>
+            <br>
+            <input type="text" name="name" value="<%= data.name %>" />
+            <br>
+            <label>Gender</label>
+            <br>
+            <input type="text" name="gender" value="<%= data.gender %>" />
+            <br>
+            <label>Username</label>
+            <br>
+            <input type="number" name="username" value="<%= data.username %>" />
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="number" name="password" value="<%= data.password %>" />
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
